@@ -18,8 +18,8 @@ export default function Exercises() {
 
      // test environment
     const test = `http://localhost:8080`;
-    const live = ``;
-    const BASE_URL = test;
+    const live = `https://workout-planner-server-yn90.onrender.com`;
+    const BASE_URL = live;
 
     function openModal() {
         setNewExercise({open})
