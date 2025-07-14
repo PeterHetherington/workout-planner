@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router"
 import ExerciseForm from "../components/ExerciseForm";
+import '../styles/Exercises.css'
 
 export default function Exercises() {
     const [exercises, setExercises] = useState([])
@@ -73,10 +74,11 @@ export default function Exercises() {
         <div>
             <h2>Exercises</h2>
             <div className="filter-container">
-            <h3>Filter by Category</h3>
-            <form>
+            <button className="createNew" onClick={openModal}>Create a new exercise</button>
+            <form className="filter">
                 <label>Filter by</label>
                 <select value={searchParams.get("category") || ""} onChange={filterChange}>
+                    <option></option>
                 {types.map((type) => (
                     // <button value={type.id} >{type.name}</button>
                     // <Link key={type.id} className="filter" to={`/exercises?category=${type.id}`} >{type.name}</Link>
@@ -87,13 +89,14 @@ export default function Exercises() {
             </form>
             </div>
             {/* <Link className="create" to='/create/exercise'>Create a new exercise</Link> */}
-            <button onClick={openModal}>Create a new exercise</button>
+            <div className="exercise-container">
             {exercises.map((exercise) => (
-                <div key={exercise.id}>
+                <div className="exercise" key={exercise.id}>
                     <h3>{exercise.name}</h3>
                     <p>{exercise.description}</p>
                 </div>
             ))} 
+            </div>
             {newExercise && <ExerciseForm close={() => setNewExercise(null)} />}
         </div>
     )

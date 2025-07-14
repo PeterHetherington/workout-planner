@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import WorkoutExercise from "../components/WorkoutExercise"
+import '../styles/CreateWorkout.css'
 
 export default function CreateWorkout(props) {
     const [types, setTypes] = useState([])
@@ -84,9 +85,10 @@ export default function CreateWorkout(props) {
                     ))}
                     <button className='submit' type="submit" >Submit</button>
                 </form>
-                <button className='close' onClick={props.close}>&times;</button>
-                <button className='addNew' onClick={increaseCounter} > Add new exercise </button>
-                <button className='remove' onClick={removeExercise} > Remove exercise</button>
+                <div className="button-container">
+                <button className='Wbtn' onClick={increaseCounter} > Add new exercise </button>
+                <button className='Wbtn' onClick={removeExercise} > Remove exercise</button>
+                </div>
             </div>
         </div>
     )

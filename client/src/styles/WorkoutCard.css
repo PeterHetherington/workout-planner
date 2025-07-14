@@ -1,0 +1,49 @@
+.workout-container {
+    background-color: #240046;
+    width: 91vw;
+    border-radius: 10px;
+    justify-self: center;
+}
+
+.workouts{
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.workout-img{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    
+}
+
+.img-container{
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.wTitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.wDesc {
+    padding: 2rem;
+    text-align: center;
+}
+
+.create {
+    background-color: #3C096C;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border: transparent;
+    border-radius: 2rem;
+}

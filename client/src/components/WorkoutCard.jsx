@@ -1,4 +1,5 @@
 import { Link } from "react-router"
+import '../styles/WorkoutCard.css'
 
 export default function WorkoutCard(props) {
 
@@ -8,7 +9,7 @@ export default function WorkoutCard(props) {
 
     return (
     <div className="workout-container">
-        <Link className="wBtn" to={`/workouts/${props.id}`}>
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} className="wBtn" to={`/workouts/${props.id}`}>
             <div className="img-container">
                 <img className="workout-img" src={props.img} onError={(e) => {
                     e.currentTarget.onerror = null
@@ -16,8 +17,8 @@ export default function WorkoutCard(props) {
                 }}/>
             </div>
             <div className="info">
-                <h3>{props.name}</h3>
-                <p>{props.desc}</p>
+                <h3 className="wTitle">{props.name}</h3>
+                <p className="wDesc">{props.desc}</p>
             </div>
         </Link>
         {/* <button onClick={handleDelete}>Delete workout</button> */}

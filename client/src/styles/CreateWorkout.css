@@ -1,0 +1,20 @@
+.button-container{
+    display: flex;
+    width: 96vw;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Wbtn {
+    padding: 1rem;
+}
+
+.workoutForm {
+    background-color: #3C096C;
+    border-radius: 1rem;
+    width: 96vw;
+    justify-self: center;
+    margin-top: 1rem;
+}
+

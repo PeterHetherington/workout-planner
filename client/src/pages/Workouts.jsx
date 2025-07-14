@@ -34,7 +34,7 @@ export default function Workouts() {
     return(
         <div>
             <h2>Workouts</h2>
-            <Link className="create" to='/create/workout'>Create a new workout</Link>    
+            <Link style={{ textDecoration: 'none', color: 'inherit' }} className="create" to='/create/workout'>Create a new workout</Link>    
         <div className="workouts">
             {workouts.map((workout) => (
                 <div key={workout.id}>
