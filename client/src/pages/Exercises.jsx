@@ -31,7 +31,8 @@ export default function Exercises() {
     useEffect(() => {
         async function fetchExercises() {
             try {
-            const res = await fetch(`${BASE_URL}/exercises`)
+            const category = searchParams.get("category")
+            const res = await fetch(`${BASE_URL}/exercises?category=${category}`)
             if(!res.ok){
                 throw new Error("HTTP error")
             }

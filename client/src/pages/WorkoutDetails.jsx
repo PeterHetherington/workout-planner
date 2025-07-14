@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router";
+import '../styles/WorkoutDetails.css'
 
 export default function WorkoutDetails() {
     const [workout, setWorkout] = useState([])
@@ -35,9 +36,11 @@ export default function WorkoutDetails() {
         {workout.length > 0 ? (
             <>
             <div>
-            <h2>{workout[0].title}</h2>
+            <h2 className="heading">{workout[0].title}</h2>
         </div>
-        <img src={workout[0].image}/>
+        <div className="full-image-container">
+            <img className="full-image" src={workout[0].image}/>
+        </div>
         </>
         ):(<p>Loading...</p>)}
         <table>

@@ -1,0 +1,23 @@
+.heading{
+    font-size: 2rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.full-image-container {
+    max-width: 100%;
+    align-self: center;
+    overflow: hidden;
+}
+
+.full-image{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+table{
+    justify-self: center;
+    width: 90%;
+    text-align: left;
+}
