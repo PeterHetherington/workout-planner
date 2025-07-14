@@ -32,7 +32,8 @@ export default function Exercises() {
         async function fetchExercises() {
             try {
             const category = searchParams.get("category")
-            const res = await fetch(`${BASE_URL}/exercises?category=${category}`)
+            const url = category ? `${BASE_URL}/exercises?category=${category}` : `${BASE_URL}/exercises`
+            const res = await fetch(url)
             if(!res.ok){
                 throw new Error("HTTP error")
             }
